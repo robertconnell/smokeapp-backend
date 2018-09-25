@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
             .onDelete('CASCADE') 
             .index();
         smoke_break.integer('break_interval');
+        smoke_break.integer('breaks_left');
     });
 };
 

@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 app.use('/smoker', smoker);
 app.use('/smoke_break', smoke_break)
+app.use('/smoke_break_all', smoke_break)
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error("Not Found");

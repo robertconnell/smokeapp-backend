@@ -18,5 +18,11 @@ module.exports = {
     },
     listBreak(){
         return database('smoke_break').select();
+    },
+    listBreakLast(){
+        return database('smoke_break').orderBy('id', 'desc').first().select();
+    },
+    createBreak(smoke_break){
+        return database('smoke_break').insert(smoke_break).returning('*').then(record => record[0]);
     }
 };

@@ -9,4 +9,13 @@ router.get('/', (req, resp, next) => {
         .catch(next)
 })
 
+router.post('/', (req, resp, next) => {
+    queries
+        .create(req.body)
+        .then(smoker => {
+            resp.status(201).json({ data: smoker });
+        })
+        .catch(next);
+});
+
 module.exports = router

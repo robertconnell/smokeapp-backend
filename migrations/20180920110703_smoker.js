@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('smoker', smoker => {
         smoker.increments();
-        smoker.string('name');
+        smoker.string('smoker_name');
         smoker.time('day_start');
         smoker.time('day_end');
         smoker.integer('cigarette_limit')

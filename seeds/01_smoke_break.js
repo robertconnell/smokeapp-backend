@@ -3,7 +3,8 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       return knex('smoke_break').insert([{
           smoker_id: 1,
-          break_interval: 930
+          break_interval: 930,
+          breaks_left: 5
         }]);
       });
     };
